@@ -1,25 +1,13 @@
-// mission 1:
+// Century From Year
+// Introduction
+// The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
 
-//use keyword function to define your function, function name should be helloWorld(don't forget the () and {})
+// Task
+// Given a year, return the century it is in.
 
-function helloWorld(){
-  console.log("Hello World!")
-}
-
-//mission 2:
-
-//use keyword var (or let or const) to define a variable str, value of str should be a string: "Hello World!"(don't forget the =).
-
- helloWorld(){const str = helloWorld()
-console.log(str)
-
-
-
-
-//mission 3:
-
-//type the console.log() in the next line (don't forget to put the str in the parentheses). 
-
-console.log(str);
-
-// this is a test
+function century(year){
+  if (year.toString().length < 3) return 1;
+  const c = +year.toString().slice(0, -2)
+  if (year % 100 === 0) return c;
+  return c + 1;
+  }
